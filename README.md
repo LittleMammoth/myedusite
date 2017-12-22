@@ -48,7 +48,7 @@ IDE:eclipse，idea</br>
 
 DB:Mysql5.5</br>
 
-JDK:JAVA 7</br>
+JDK:JAVA 7</br>8也没问题
 
 tomcat:tomcat 7.0.68以上</br>
 
