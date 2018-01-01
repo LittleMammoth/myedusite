@@ -8,7 +8,7 @@
 <!-- End of Meta -->
 
 <!-- Page title -->
-<title>${websitemap.web.company}-${websitemap.web.title}</title>
+<title>cowfish 让技术酷起来</title>
 <!-- End of Page title -->
 <meta name="author" content="${websitemap.web.author}" />
 <meta name="keywords" content="${websitemap.web.keywords}" />
@@ -250,7 +250,7 @@
 	<div id="footer">
 		<p class="mid">${websitemap.web.copyright}</p>
 		<p class="mid">
-			Powered By <a target="_blank" href="http://demo1.inxedu.com/" style="color: #666;">${websitemap.web.company}</a>
+			Powered By <a target="_blank" href="http://www.cowfish.net/" style="color: #666;">cowfish</a>
 		</p>
 	</div>
 		<script type="text/javascript">

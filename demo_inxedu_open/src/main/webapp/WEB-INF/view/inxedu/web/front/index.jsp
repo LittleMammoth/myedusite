@@ -207,11 +207,11 @@
 				</div>
 				<div class="tip-new-in-nr-bottom">
 					<div class="tip-new-in-b-txt f-fM fsize16 c-333">
-						开源版本切勿商务哦！别辜负了我们善良的初衷，不然因酷小伙伴可是要暴躁的哟。更多功能欢迎购买商业版。
-						<p class="f-fM fsize16 c-333 disFw">——因酷教育软件</p>
+						欢迎来到cowfish 让技术的传播酷起来~。
+						<p class="f-fM fsize16 c-333 disFw">——cowfish</p>
 					</div>
 					<div class="tip-new-in-b-btn">
-						<a href="http://www.inxedu.com" title="选购商业版" target="_blank">选购商业版</a>
+						<a href="http://www.cowfish.net" title="选购商业版" target="_blank">cowfish</a>
 					</div>
 				</div>
 			</div>
