@@ -126,3 +126,10 @@ function queryCommentReplyPage(pCommentId) {
 		}
 	});
 }
+function courseIsLogin(){
+	// 评论必须先登陆
+	if (!isLogin()) {
+		lrFun();
+		return;
+	}
+}

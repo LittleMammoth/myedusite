@@ -250,7 +250,7 @@
 	<div id="footer">
 		<p class="mid">${websitemap.web.copyright}</p>
 		<p class="mid">
-			Powered By <a target="_blank" href="http://www.cowfish.net/" style="color: #666;">cowfish</a>
+			Powered By <a target="_blank" href="http://www.lemonkt.com/" style="color: #666;">cowfish</a>
 		</p>
 	</div>
 		<script type="text/javascript">

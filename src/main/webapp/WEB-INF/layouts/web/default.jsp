@@ -106,6 +106,23 @@
 		<!-- 公共头引入 -->
 		<sitemesh:body></sitemesh:body>
 		<!-- 公共底引入 -->
+	<script type="text/javascript">
+	   
+      $(document).ready(function (){
+    		
+    	   courseIsLogin();
+    		
+    	   $("#notUser").click(function (){
+    		   lrFun(3);
+      		 });
+           
+    	   $("#locaPay").click(function (){
+    		   var backUrl = window.location.href;
+        			location.href="/lc/locaPay";
+        		return;
+           });
+      });
+     </script>
 		<jsp:include page="/WEB-INF/layouts/web/footer.jsp" />
 		<!-- 公共底引入 -->
 	</div>
