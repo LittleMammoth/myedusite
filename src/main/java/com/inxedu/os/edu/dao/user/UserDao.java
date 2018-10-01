@@ -123,4 +123,10 @@ public interface UserDao {
 	 * @return
 	 */
 	public List<User> getUserListPage(User user, PageEntity page);
+
+	/**
+	 * @param userId
+	 * @return
+	 */
+	public void updateMemberState(int userId);
 }

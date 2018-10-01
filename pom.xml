@@ -424,6 +424,11 @@
             <scope>system</scope>
             <systemPath>${basedir}/src/main/webapp/WEB-INF/lib/json.jar</systemPath>
         </dependency>
-        <!--ue编辑器-->
+        <!--支付宝支付-->
+        	<dependency>
+			<groupId>com.github.1991wangliang</groupId>
+			<artifactId>alipay-sdk</artifactId>
+			<version>1.0.0</version>
+		</dependency>
     </dependencies>
 </project>

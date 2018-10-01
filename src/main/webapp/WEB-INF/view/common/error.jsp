@@ -128,11 +128,14 @@
 			                buffer.append(messages[i].toString()).append("<br/>");
 			            }
 			            out.println(buffer.toString());
+
 			        }
 			 	}
 			 	 else{
 		            out.println(request.getAttribute("myexception").toString());
 		        }  
+        out.clear();
+        out = pageContext.pushBody();
 	           %>
 	</div>
 </body>

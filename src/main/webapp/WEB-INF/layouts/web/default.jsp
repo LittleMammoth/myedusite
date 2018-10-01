@@ -118,7 +118,7 @@
            
     	   $("#locaPay").click(function (){
     		   var backUrl = window.location.href;
-        			location.href="/lc/locaPay";
+        			location.href="/front/locaPay";
         		return;
            });
       });

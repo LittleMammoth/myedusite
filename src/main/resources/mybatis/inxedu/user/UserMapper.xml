@@ -254,4 +254,7 @@
 			</if>
 		</where>
 	</select>
+	<update id="updateMemberSate"  parameterType="java.lang.String">
+	update edu_user set IS_MEMBER = "1" where USER_ID = #{userId}
+	</update>
 </mapper>

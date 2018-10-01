@@ -121,5 +121,12 @@ public class UserDaoImpl extends GenericDaoImpl implements UserDao{
 	public List<User> getUserListPage(User user, PageEntity page) {
 		return this.queryForListPage("UserMapper.getUserListPage", user, page);
 	}
+
+
+	@Override
+	public void updateMemberState(int userId) {
+		Long update = this.update("UserMapper.updateMemberSate",userId);
+		System.out.println("update"+update);
+	}
 	
 }

@@ -338,7 +338,7 @@ function lrFun(type) {
                         '</ol>'+
                         /*'<section class="hLh30 of pl10"><span class="fr"><a href="/uc/register" class="c-master fsize12">没有账号？去注册→</a></span>'+*/
                         '<section class="hLh30 of pl10">'+
-                        '<span class="fl"><label class="hand c-999 vam"><input type="checkbox" style="vertical-align: -2px;" id="autoThirty">自动登录</label><a class="vam ml10 c-blue" title="" href="/front/passwordRecovery">忘记密码?</a></span></section>'+
+                        '<span class="fl"><a class="vam ml10 c-blue" title="" href="/front/passwordRecovery">忘记密码?</a></span></section>'+
                         '<section class="mt20 tac">'+
                             '<a href="javascript:void(0)" title="登 录" class="e-login-btn" onclick="dialogLogin('+type+')">登 录</a>'+
                         '</section>'+

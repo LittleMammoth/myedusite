@@ -299,4 +299,13 @@ public class UserServiceImpl implements UserService{
 		return userDao.getUserListPage(user, page);
 	}
 
+
+	/* (non-Javadoc)
+	 * @see com.inxedu.os.edu.service.user.UserService#updateUserMemberState()
+	 */
+	@Override
+	public void updateUserMemberState(int userId) {
+		userDao.updateMemberState(userId);
+	}
+
 }

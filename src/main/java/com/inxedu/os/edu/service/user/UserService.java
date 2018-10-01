@@ -150,4 +150,8 @@ public interface UserService {
 	 * @return
 	 */
 	public List<User> getUserListPage(User user, PageEntity page);
+	/**
+	 * 用户开通会员
+	 */
+	public void updateUserMemberState(int userId);
 }
