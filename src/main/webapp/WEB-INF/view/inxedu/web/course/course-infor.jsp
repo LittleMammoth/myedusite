@@ -4,7 +4,7 @@
 <html>
 <head>
 <title>${course.courseName}详情</title>
-	<script src="http://vod.baofengcloud.com/html/script/bfcloud.js?v=2"></script>
+	<!-- <script src="http://vod.baofengcloud.com/html/script/bfcloud.js?v=2"></script> -->
 <script type="text/javascript">
 	var isok = ${isok};
 	var currentprice=${course.currentPrice};

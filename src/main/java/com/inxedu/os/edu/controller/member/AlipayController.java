@@ -82,7 +82,7 @@ public class AlipayController extends BaseController{
     @RequestMapping("/locaPay")
     public void gotoPayPage(HttpServletResponse response,HttpServletRequest request) throws IOException {
         // 订单模型
-		PrintWriter writer = response.getWriter();
+    	ServletOutputStream out=response.getOutputStream();
 		// 6.对接支付代码 返回提交支付from表单元素给客户端
 		// 获得初始化的AlipayClient
 		AlipayClient alipayClient = new DefaultAlipayClient(AlipayConfig.gatewayUrl, AlipayConfig.app_id,
@@ -123,13 +123,13 @@ public class AlipayController extends BaseController{
 			order.setUpdateTime(new Date());
 			orderService.createOrder(order);
 	
-			writer.write(result);
+			out.print(result);;
 		} catch (Exception e) {
 			logger.error("支付失败");
 		}
 		
-		writer.flush();
-		writer.close();
+		out.flush();
+		out.close();
     }
 	// 同步回调
 	@RequestMapping("/synCallBack")
@@ -151,7 +151,7 @@ public class AlipayController extends BaseController{
 			params.put(name, valueStr);
 		}
 		boolean signVerified = AlipaySignature.rsaCheckV1(params, AlipayConfig.alipay_public_key, AlipayConfig.charset, AlipayConfig.sign_type); //调用SDK验证签名
-		PrintWriter writer = response.getWriter();
+		ServletOutputStream writer = response.getOutputStream();
 		//——请在这里编写您的程序（以下代码仅作参考）——
 		if(signVerified) {
 			//商户订单号

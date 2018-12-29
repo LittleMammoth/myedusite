@@ -18,6 +18,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.PrintWriter;
@@ -52,7 +53,7 @@ public class CourseKpointController extends BaseController {
 		response.setContentType("text/html;charset=utf-8");
 
 		try {
-			PrintWriter out=response.getWriter();
+			ServletOutputStream out=response.getOutputStream();
 			CourseKpoint courseKpoint = courseKpointService.queryCourseKpointById(kpointId);
 			// 当传入数据不正确时直接返回
 			if (ObjectUtils.isNull(courseKpoint)) {
