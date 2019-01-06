@@ -4,6 +4,9 @@
 <html>
 <head>
 <title>${course.courseName}详情</title>
+<style type="text/css">
+.c-attr-wrap{width:500px;height:322px}
+</style>
 	<!-- <script src="http://vod.baofengcloud.com/html/script/bfcloud.js?v=2"></script> -->
 <script type="text/javascript">
 	var isok = ${isok};
@@ -47,7 +50,8 @@
 							<span class="c-fff fsize24">${course.courseName}</span>
 						</h2>
 						<section class="c-attr-jg">
-							<span class="c-fff">价格：</span><big class="c-yellow">￥${course.currentPrice }</big> <span class="c-ccc ml10">原价：<s>￥${course.sourcePrice }</s></span>
+								<span class="c-fff f-fM">课时数: ${course.lessionNum }&nbsp;&nbsp;&nbsp;</span>
+								<span class="c-fff f-fM">浏览数: ${course.pageViewcount}</span> 
 						</section>
 						<section class="c-attr-mt c-attr-undis">
 							<span class="c-fff fsize14">主讲： <c:forEach items="${teacherList }" var="tea">
@@ -57,19 +61,10 @@
 							</span>
 						</section>
 						<section class="c-attr-mt c-attr-time">
-							<span class="c-fff fsize14">课程有效期：
-											<c:if test="${course.loseType==0 }">
-												<fmt:formatDate pattern="yyyy/MM/dd HH:mm"  value="${course.endTime}" />
-											</c:if>
-											<c:if test="${course.loseType==1 }">
-													从购买之日起${course.loseTime }天
-												</span>
-											</c:if>
+							<span class="c-fff fsize14">课程有效期：永久有效
 							</span>
 						</section>
 						<section class="c-attr-mt">
-									<a href="javascript:void(0)" title="立即观看" onclick="if(isLogin()){ window.location.href='/uc/play/${course.courseId }'} else{lrFun();} " class="comm-btn c-btn-3">立即观看</a>
-							<span class="ml10"><tt class="c-yellow f-fM">*咨询 ${websitemap.web.phone}</tt></span>
 						</section>
 						<section class="c-attr-mt of ml10">
 							<section class="kcShare pr fl hand vam">
@@ -87,7 +82,7 @@
 									</c:if>
 						</section>
 					</section>
-				</aside>
+				<!-- </aside>
 				<aside class="thr-attr-box">
 					<ol class="thr-attr-ol clearfix">
 						<li><p>&nbsp;</p>
@@ -95,18 +90,9 @@
 								<span class="c-fff f-fM">购买数</span><br>
 								<h6 class="c-fff f-fM mt10">${course.pageBuycount }</h6>
 							</aside></li>
-						<li><p>&nbsp;</p>
-							<aside>
-								<span class="c-fff f-fM">课时数</span><br>
-								<h6 class="c-fff f-fM mt10">${course.lessionNum }</h6>
-							</aside></li>
-						<li><p>&nbsp;</p>
-							<aside>
-								<span class="c-fff f-fM">浏览数</span><br>
-								<h6 class="c-fff f-fM mt10">${course.pageViewcount}</h6>
-							</aside></li>
+						
 					</ol>
-				</aside>
+				</aside> -->
 				<div class="clear"></div>
 			</div>
 			<!-- /课程封面介绍 -->

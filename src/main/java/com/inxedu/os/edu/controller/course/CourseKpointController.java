@@ -51,9 +51,8 @@ public class CourseKpointController extends BaseController {
 	@RequestMapping("/front/ajax/getKopintHtml")
 	public String getKopintHtml(Model model, HttpServletRequest request,@RequestParam("kpointId")int kpointId, HttpServletResponse response) {
 		response.setContentType("text/html;charset=utf-8");
-
 		try {
-			ServletOutputStream out=response.getOutputStream();
+			PrintWriter out = response.getWriter();
 			CourseKpoint courseKpoint = courseKpointService.queryCourseKpointById(kpointId);
 			// 当传入数据不正确时直接返回
 			if (ObjectUtils.isNull(courseKpoint)) {
@@ -121,6 +120,8 @@ public class CourseKpointController extends BaseController {
 		} catch (Exception e) {
 			logger.error("CourseKpointController.getKopintHtml", e);
 			return setExceptionRequest(request, e);
+		}finally {
+	
 		}
 	}
 

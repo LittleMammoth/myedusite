@@ -438,13 +438,13 @@ public class UserController extends BaseController{
 			user.setLoginTimeStamp(currentTimestamp);
 
 			if("true".equals(ipForget)){
-				//缓存用户
+				//缓存用户 6个小时
 				EHCacheUtil.set(uuid, user,CacheConstans.USER_TIME);
 				//缓存用户的登录时间
 				EHCacheUtil.set(CacheConstans.USER_CURRENT_LOGINTIME+user.getUserId(), currentTimestamp.toString(), CacheConstans.USER_TIME);
 				WebUtils.setCookie(response, CacheConstans.WEB_USER_LOGIN_PREFIX, uuid, (CacheConstans.USER_TIME/60/60/24));
 			}else{
-				//缓存用户
+				//缓存用户 24个小时
 				EHCacheUtil.set(uuid, user,86400);
 				//缓存用户的登录时间
 				EHCacheUtil.set(CacheConstans.USER_CURRENT_LOGINTIME+user.getUserId(), currentTimestamp.toString(), 86400);
