@@ -35,9 +35,9 @@
 							</c:otherwise>
 						</c:choose>
 	
-						<a href="javascript:void(0)" onclick="vedioClick(${freeVideoId})" title="${course.courseName}" class="v-play-btn">
+						<!-- <a href="javascript:void(0)" onclick="vedioClick(${freeVideoId})" title="${course.courseName}" class="v-play-btn">
 							<em class="icon30">&nbsp;</em>
-						</a>
+						</a> -->
 					</section>
 					<section class="p-h-video-tip">
 						<img src="${ctx }/static/inxweb/img/v-loading.gif">
