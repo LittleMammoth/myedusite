@@ -56,7 +56,7 @@ public class CourseKpointController extends BaseController {
 			CourseKpoint courseKpoint = courseKpointService.queryCourseKpointById(kpointId);
 			// 当传入数据不正确时直接返回
 			if (ObjectUtils.isNull(courseKpoint)) {
-				out.println("<script>var noCover=true; dialog dialog('提示','参数错误！',1);</script>");
+				out.println("<script>var noCover=true;dialog('提示','参数错误！',1);</script>");
 				return null;
 			}
 
