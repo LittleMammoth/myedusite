@@ -17,7 +17,8 @@
 	EDU_USER.BANNER_URL,
 	EDU_USER.MSG_NUM,
 	EDU_USER.SYS_MSG_NUM,
-	EDU_USER.LAST_SYSTEM_TIME
+	EDU_USER.LAST_SYSTEM_TIME,
+	EDU_USER.IS_MEMBER
 	</sql>
 	<sql id="edu_user_property">
 	#{userId},
@@ -34,7 +35,8 @@
 	#{bannerUrl},
 	#{msgNum},
 	#{sysMsgNum},
-	#{lastSystemTime}
+	#{lastSystemTime},
+	#{isMember}
 	</sql>
 	<resultMap type="User" id="UserResult">
 	<result property="userId" column="USER_ID"/>
@@ -52,6 +54,7 @@
 	<result property="msgNum" column="MSG_NUM"/>
 	<result property="sysMsgNum" column="SYS_MSG_NUM"/>
 	<result property="lastSystemTime" column="LAST_SYSTEM_TIME"/>
+	<result property="isMember" column="IS_MEMBER"/>
 	</resultMap>
 	
 	<!-- 注册创建用户 -->

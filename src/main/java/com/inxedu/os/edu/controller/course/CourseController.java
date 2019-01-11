@@ -13,11 +13,13 @@ import com.inxedu.os.edu.entity.subject.QuerySubject;
 import com.inxedu.os.edu.entity.subject.Subject;
 import com.inxedu.os.edu.entity.teacher.QueryTeacher;
 import com.inxedu.os.edu.entity.teacher.Teacher;
+import com.inxedu.os.edu.entity.user.User;
 import com.inxedu.os.edu.service.course.CourseFavoritesService;
 import com.inxedu.os.edu.service.course.CourseKpointService;
 import com.inxedu.os.edu.service.course.CourseService;
 import com.inxedu.os.edu.service.subject.SubjectService;
 import com.inxedu.os.edu.service.teacher.TeacherService;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +29,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+
 import java.util.*;
 /**
  * 前台 Course管理接口
@@ -122,6 +125,7 @@ public class CourseController extends BaseController {
      */
     @RequestMapping("/front/couinfo/{id}")
     public ModelAndView couinfo(HttpServletRequest request, @PathVariable("id") int courseId) {
+  
         ModelAndView model = new ModelAndView();
     	try {
     		model.setViewName(couinfo);

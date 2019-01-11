@@ -150,16 +150,14 @@
 																	<c:if test="${index.first==false}">style="display: none;"</c:if>
 																>
 																	<c:forEach items="${parentKpoint.kpointList}" var="sonKpoint">
-																		<li class="lh-menu-second ml30"><a href="javascript:void(0)" <%-- onclick="playVideo('${sonKpoint.videoUrl }',this)" --%> onclick="getPlayerHtml(${sonKpoint.kpointId },${sonKpoint.free },this)" title="">
-																				<span class="fr"> 
+																		<li class="lh-menu-second ml30"><a href="javascript:void(0)" onclick="getPlayerHtml(${sonKpoint.kpointId },${sonKpoint.free },this)" title="">
+																				<em class="lh-menu-i-2 icon14 mr5">&nbsp;</em>${sonKpoint.name }
 																					<c:if test="${sonKpoint.free==1 }">
-																						<tt class="free-icon vam mr10">免费试听</tt>
+																						<span class="free-icon vam mr10">&nbsp;免费</span>
 																					</c:if>
-																					<c:if test="${!empty sonKpoint.playTime}">
-																						<em class="lh-p-icon icon14 ml5">&nbsp;</em>
-																						${sonKpoint.playTime}
+																					<c:if test="${sonKpoint.free==2 }">
+																						<span style="color: red;">&nbsp;VIP</span>
 																					</c:if>
-																				</span><em class="lh-menu-i-2 icon14 mr5">&nbsp;</em>${sonKpoint.name }
 																			</a>
 																		</li>
 																	</c:forEach>
@@ -170,16 +168,15 @@
 														<c:if test="${parentKpoint.kpointType==1 }"><!-- 视频 -->
 															<li class="lh-menu-stair">
 																<ul class="lh-menu-ol no-parent-node">
-																	<li class="lh-menu-second"><a title="" <%-- onclick="playVideo('${parentKpoint.videoUrl }',this)" --%> onclick="getPlayerHtml(${parentKpoint.kpointId },${parentKpoint.free },this)" href="javascript:void(0)">
-																			<span class="fr"> 
-																				<c:if test="${parentKpoint.free==1 }">
-																					<tt class="free-icon vam mr10">免费试听</tt>
-																				</c:if>
-																				<c:if test="${!empty parentKpoint.playTime}">
-																					<em class="lh-p-icon icon14 ml5">&nbsp;</em>
-																					${parentKpoint.playTime}
-																				</c:if>
-																				</span><em class="lh-menu-i-2 icon14 mr5">&nbsp;</em>${parentKpoint.name }</a>
+																	<li class="lh-menu-second"><a title=""  onclick="getPlayerHtml(${parentKpoint.kpointId },${parentKpoint.free },this)" href="javascript:void(0)">
+																				<em class="lh-menu-i-2 icon14 mr5">&nbsp;</em>${parentKpoint.name }
+																					<c:if test="${parentKpoint.free==1 }">
+																						<span class="free-icon vam mr10">&nbsp;免费</span>
+																					</c:if>
+																					<c:if test="${parentKpoint.free==2 }">
+																						<span style="color: red;">&nbsp;VIP</span>
+																					</c:if>
+																				</a>
 																	</li>
 																</ul>
 															</li>

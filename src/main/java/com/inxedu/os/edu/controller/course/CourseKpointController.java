@@ -2,14 +2,17 @@ package com.inxedu.os.edu.controller.course;
 
 import com.inxedu.os.common.controller.BaseController;
 import com.inxedu.os.common.util.ObjectUtils;
+import com.inxedu.os.common.util.SingletonLoginUtils;
 import com.inxedu.os.common.util.StringUtils;
 import com.inxedu.os.common.util.inxeduvideo.InxeduVideo;
 import com.inxedu.os.edu.constants.enums.WebSiteProfileType;
 import com.inxedu.os.edu.entity.course.Course;
 import com.inxedu.os.edu.entity.kpoint.CourseKpoint;
+import com.inxedu.os.edu.entity.user.User;
 import com.inxedu.os.edu.service.course.CourseKpointService;
 import com.inxedu.os.edu.service.course.CourseService;
 import com.inxedu.os.edu.service.website.WebsiteProfileService;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +24,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import java.io.PrintWriter;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -52,6 +57,10 @@ public class CourseKpointController extends BaseController {
 	public String getKopintHtml(Model model, HttpServletRequest request,@RequestParam("kpointId")int kpointId, HttpServletResponse response) {
 		response.setContentType("text/html;charset=utf-8");
 		try {
+			/**
+			 * 判断权限,是不是会员课程
+			 */
+		
 			PrintWriter out = response.getWriter();
 			CourseKpoint courseKpoint = courseKpointService.queryCourseKpointById(kpointId);
 			// 当传入数据不正确时直接返回
@@ -59,7 +68,10 @@ public class CourseKpointController extends BaseController {
 				out.println("<script>var noCover=true;dialog('提示','参数错误！',1);</script>");
 				return null;
 			}
-
+		 if (courseKpoint.getFree()==2) {
+			  	User user = SingletonLoginUtils.getLoginUser(request);
+			  	
+		}
 			//获取课程
 			Course course = courseService.queryCourseById(courseKpoint.getCourseId());
 			if (course==null) {

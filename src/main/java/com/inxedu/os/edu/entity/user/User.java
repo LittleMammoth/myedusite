@@ -42,6 +42,6 @@ public class User implements Serializable{
 	private int sysMsgNum;
     /**上传统计系统消息时间*/
     private Date lastSystemTime;
-
 	private long loginTimeStamp;//登录时的当前时间戳
+	private int isMember;//是否会员(0不是1是)
 }

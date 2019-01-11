@@ -48,7 +48,7 @@ function getPlayerHtml(kpointId,free,obj) {
 	$(".lh-menu-stair").find("ul>li>a,ol>li>a").removeClass("current-2");
 	$(obj).addClass("current-2");
 	
-	if(isok==true || currentprice <= 0 || free==1){
+	if(isok==true||currentprice <= 0 || free==1){
 		$.ajax({
 			url : "" + baselocation + "/front/ajax/getKopintHtml",
 			data : {
@@ -66,7 +66,7 @@ function getPlayerHtml(kpointId,free,obj) {
 			}
 		});
 	}else{
-		dialog('提示',"该课程视频暂不支持试听,请购买后观看!",1);
+		dialog('提示',"该课程视频暂不支持试听,请购买后观看!",2);
 		return;
 	}
 	
