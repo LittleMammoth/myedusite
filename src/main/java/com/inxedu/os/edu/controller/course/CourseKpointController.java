@@ -70,6 +70,17 @@ public class CourseKpointController extends BaseController {
 			}
 		 if (courseKpoint.getFree()==2) {
 			  	User user = SingletonLoginUtils.getLoginUser(request);
+	            if (user==null) {
+	            	out.println("<script>var noCover=true;dialog('提示','请登录后观看',1);</script>");
+			  		return null;
+				}
+			  	int isMember = user.getIsMember();
+			  
+			  	if (isMember==0) {
+			  		out.println("<script>var noCover=true;dialog('提示','请升级会员后观看',1);</script>");
+			  		return null;
+				}
+			  	
 			  	
 		}
 			//获取课程
