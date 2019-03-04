@@ -41,7 +41,7 @@
 			<div class="ei-item-box">
 				<div class="container pr">
 					<a class="fr" id="Replacement" href="javascript:void(0);">
-						<img alt="" src="/static/inxweb/img/HF-BG.png">
+						<!-- <img alt="" src="/static/inxweb/img/HF-BG.png"> -->
 					</a>
 				</div>
 			</div>
